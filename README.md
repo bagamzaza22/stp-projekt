@@ -1,4 +1,4 @@
-# ultragiga
+# stp-projekt
 STP Spanning Tree Protocol
 Mire való az STP?
 
