@@ -1,9 +1,5 @@
 Alapelv: 3-2-1 szabály
 
-3 példány az adatból
-
-2 különböző adathordozón
-
 1 fizikailag elkülönített (offsite / felhő)
 
 Mentési típusok
@@ -83,3 +79,4 @@ Elkülönített kulcstárolás
 Rendszeres kulcsrotáció
 
 MFA hozzáférés
+
