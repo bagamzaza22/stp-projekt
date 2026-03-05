@@ -1,0 +1,85 @@
+Alapelv: 3-2-1 szabály
+
+3 példány az adatból
+
+2 különböző adathordozón
+
+1 fizikailag elkülönített (offsite / felhő)
+
+Mentési típusok
+Típus	Gyakoriság	Cél
+Teljes mentés	Hetente	Teljes rendszer mentése
+Inkrementális	Naponta	Csak a változások
+Snapshot	Óránként (kritikus rendszereknél)	Gyors visszaállítás
+Példa struktúra
+
+Lokális NAS mentés (pl. Synology)
+
+Felhő mentés: Amazon Web Services S3 / Microsoft Azure Blob
+
+Verziókövetés: minimum 30 nap
+
+Archiválás: havi mentés 1 évig
+
+Automatizált mentések
+Eszközök
+
+Linux: cron  rsync
+
+Windows Server: Task Scheduler  PowerShell
+
+Vállalati megoldás: Veeam Backup  Replication
+
+Open-source: Bacula
+
+Cron időzítés:
+Visszaállítás tesztelése
+
+A mentés csak akkor ér valamit, ha visszaállítható.
+
+Ajánlott:
+
+Negyedéves teljes restore teszt
+
+Havi fájl szintű visszaállítás próba
+
+Dokumentált visszaállítási folyamat (DRP – Disaster Recovery Plan)
+
+Tesztkörnyezetben történő visszaállítás
+
+Mérőszámok:
+
+RTO (Recovery Time Objective)
+
+RPO (Recovery Point Objective)
+
+EXTRA
+Naplózás
+SIEM rendszerbe integrálás (pl. Splunk)
+
+ Titkosítás
+Adatátvitel közben:
+
+HTTPS
+
+SFTP
+
+VPN
+
+Tároláskor:
+
+AES-256 titkosítás
+
+LUKS (Linux)
+
+BitLocker (Windows)
+
+Felhő oldali encryption (SSE-S3, SSE-Azure)
+
+Kulcskezelés:
+
+Elkülönített kulcstárolás
+
+Rendszeres kulcsrotáció
+
+MFA hozzáférés
